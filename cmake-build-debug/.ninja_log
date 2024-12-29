@@ -1,5 +1,8 @@
 # ninja log v6
-4	499	7571834654921134	CMakeFiles/untitled.dir/main.c.obj	b0d70a1fcc90cfc9
-501	722	7571834659883219	untitled.exe	3c5d2238c4b2e4a9
 21	129	7571835497335691	CMakeFiles/untitled.dir/main.c.obj	4444b1f52372ad23
 130	300	7571835498423461	untitled.exe	3c5d2238c4b2e4a9
+2	268	7571858193635922	build.ninja	d320ef2d1e21c1a
+34	99	7571858194657879	CMakeFiles/untitled.dir/ipc_utils.c.obj	2ecf74dba4b795a
+39	104	7571858194708023	CMakeFiles/untitled.dir/chat_utils.c.obj	1529b1aff1b18a59
+30	117	7571858194607876	CMakeFiles/untitled.dir/client.c.obj	73565b8b96a471f4
+118	238	7571858195497960	untitled.exe	e681628ad56db77
