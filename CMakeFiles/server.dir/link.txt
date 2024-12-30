@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/server.dir/server.c.o CMakeFiles/server.dir/ipc_utils.c.o CMakeFiles/server.dir/chat_utils.c.o -o server 
