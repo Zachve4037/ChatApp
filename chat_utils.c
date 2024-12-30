@@ -8,7 +8,7 @@ pthread_mutex_t clients_mutex = PTHREAD_MUTEX_INITIALIZER;
 int client_sockets[MAX_CLIENTS];
 
 void process_message(const char *message) {
-    printf("Processing message: %s\n", message);
+    printf("Spracovavanie spravy: %s\n", message);
 }
 
 void broadcast_message(const char *message, int sender_socket) {

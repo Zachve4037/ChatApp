@@ -8,8 +8,8 @@
 
 int server_socket;
 
-void handle_signal(int signal) {
-    printf("Terminating server...\n");
+void handle_signal() {
+    printf("Ukoncenie servera...\n");
     close_socket(server_socket);
     exit(0);
 }
@@ -18,12 +18,12 @@ void *handle_client(void *arg) {
     int client_socket = *(int *)arg;
     char buffer[1024];
     ssize_t bytes_read;
-    int client_id = client_socket; // Use socket descriptor as client ID
+    int client_id = client_socket;
 
     while ((bytes_read = read(client_socket, buffer, sizeof(buffer) - 1)) > 0) {
         buffer[bytes_read] = '\0';
         char message_with_id[1100];
-        snprintf(message_with_id, sizeof(message_with_id), "Client %d: %s", client_id, buffer);
+        snprintf(message_with_id, sizeof(message_with_id), "Klient %d: %s", client_id, buffer);
         process_message(message_with_id);
         broadcast_message(message_with_id, client_socket);
     }
@@ -44,12 +44,12 @@ int main() {
     signal(SIGINT, handle_signal);
 
     server_socket = create_server_socket();
-    printf("Server started...\n");
+    printf("Server bol spusteny...\n");
 
     while (1) {
         int client_socket = accept_client(server_socket);
         if (client_socket == -1) {
-            perror("accept");
+            perror("prijaty");
             continue;
         }
 

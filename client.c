@@ -13,7 +13,7 @@ void *receive_messages(void *arg) {
 
     while ((bytes_read = read(client_socket, buffer, sizeof(buffer) - 1)) > 0) {
         buffer[bytes_read] = '\0';
-        printf("Received: %s\n", buffer);
+        printf("Prijate: %s\n", buffer);
     }
 
     return NULL;
@@ -21,11 +21,11 @@ void *receive_messages(void *arg) {
 
 int main() {
     int client_socket = connect_to_server(SOCKET_PATH);
-    printf("Connected to server...\n");
+    printf("Pripojenie na server ukoncene...\n");
 
-    pthread_t tid;
-    pthread_create(&tid, NULL, receive_messages, &client_socket);
-    pthread_detach(tid);
+    pthread_t thread;
+    pthread_create(&thread, NULL, receive_messages, &client_socket);
+    pthread_detach(thread);
 
     char buffer[1024];
     while (fgets(buffer, sizeof(buffer), stdin) != NULL) {

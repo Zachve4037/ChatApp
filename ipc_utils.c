@@ -50,7 +50,7 @@ int connect_to_server(const char *socket_path) {
     strncpy(addr.sun_path, socket_path, sizeof(addr.sun_path) - 1);
 
     if (connect(client_socket, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
-        perror("connect");
+        perror("pripojenie");
         close(client_socket);
         exit(EXIT_FAILURE);
     }

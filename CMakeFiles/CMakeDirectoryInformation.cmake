@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/mnt/d/Projects/POS/ChatApp")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/mnt/d/Projects/POS/ChatApp")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/mnt/d/projects/pos/chatapp")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

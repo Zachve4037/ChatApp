@@ -1,4 +1,4 @@
-/mnt/d/Projects/POS/ChatApp/CMakeFiles/server.dir
-/mnt/d/Projects/POS/ChatApp/CMakeFiles/client.dir
-/mnt/d/Projects/POS/ChatApp/CMakeFiles/edit_cache.dir
-/mnt/d/Projects/POS/ChatApp/CMakeFiles/rebuild_cache.dir
+/mnt/d/projects/pos/chatapp/CMakeFiles/server.dir
+/mnt/d/projects/pos/chatapp/CMakeFiles/client.dir
+/mnt/d/projects/pos/chatapp/CMakeFiles/edit_cache.dir
+/mnt/d/projects/pos/chatapp/CMakeFiles/rebuild_cache.dir
