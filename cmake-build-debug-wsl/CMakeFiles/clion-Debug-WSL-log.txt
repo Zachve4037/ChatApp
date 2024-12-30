@@ -1,2 +1,6 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/d/Projects/POS/ChatApp
-/bin/bash: line 1: /usr/bin/cmake: No such file or directory
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /mnt/d/Projects/POS/ChatApp -B /mnt/d/Projects/POS/ChatApp/cmake-build-debug-wsl
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.30 or higher is required.  You are running version 3.25.1
+
+
+-- Configuring incomplete, errors occurred!

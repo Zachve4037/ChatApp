@@ -1,12 +1,22 @@
 #include "chat_utils.h"
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <pthread.h>
 
-void broadcast_message(const char *message, int exclude_socket) {
-    // Odošle správu všetkým klientom okrem toho s exclude_socket.
-}
+pthread_mutex_t clients_mutex = PTHREAD_MUTEX_INITIALIZER;
+int client_sockets[MAX_CLIENTS];
 
 void process_message(const char *message) {
-    // Validácia a spracovanie správy.
-    printf("Processed message: %s\n", message);
+    printf("Processing message: %s\n", message);
+}
+
+void broadcast_message(const char *message, int sender_socket) {
+    pthread_mutex_lock(&clients_mutex);
+    for (int i = 0; i < MAX_CLIENTS; ++i) {
+        if (client_sockets[i] != 0 && client_sockets[i] != sender_socket) {
+            write(client_sockets[i], message, strlen(message));
+        }
+    }
+    pthread_mutex_unlock(&clients_mutex);
 }
