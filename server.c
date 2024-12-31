@@ -20,6 +20,8 @@ void *handle_client(void *arg) {
     ssize_t bytes_read;
     int client_id = client_socket;
 
+    printf("Klient pripojeny....\n");
+
     while ((bytes_read = read(client_socket, buffer, sizeof(buffer) - 1)) > 0) {
         buffer[bytes_read] = '\0';
         char message_with_id[1100];

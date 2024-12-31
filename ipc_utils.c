@@ -54,7 +54,6 @@ int connect_to_server(const char *socket_path) {
         close(client_socket);
         exit(EXIT_FAILURE);
     }
-
     return client_socket;
 }
 
