@@ -37,6 +37,7 @@ void *handle_client(void *arg) {
         broadcast_message(message_with_id, client_socket);
     }
 
+    printf("Client %s has logged out.\n", client_names[client_id]);
     close_socket(client_socket);
     pthread_mutex_lock(&clients_mutex);
     for (int i = 0; i < MAX_CLIENTS; ++i) {

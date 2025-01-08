@@ -1,3 +1,4 @@
+// client.c
 #include "ipc_utils.h"
 #include "chat_utils.h"
 #include <stdio.h>
@@ -37,6 +38,8 @@ int main() {
     char buffer[1024];
     while (fgets(buffer, sizeof(buffer), stdin) != NULL) {
         if (strncmp(buffer, "exit", 4) == 0) {
+            snprintf(buffer, sizeof(buffer), "%s has disconnected.", name);
+            write(client_socket, buffer, strlen(buffer));
             break;
         }
         write(client_socket, buffer, strlen(buffer));
